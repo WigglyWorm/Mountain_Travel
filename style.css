@@ -99,15 +99,93 @@ header nav li {
  .hero a.btn {
      padding: 20px 46px;
  }
+ /* ******************************** */
+ .container {
+     padding-top: 70px;
+ }
+ .header {
+    margin-bottom: 30px; 
+    text-align: center;
+ }
+ .header p {
+     font-style: italic;
+
+ }
+ .title {
+    font-size: 35px; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #649EA2;
+ }
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
 /* ***************************** */
- .main {
+.packages {
+    background-color: #f2f2f2;
+}
+/* .packages .header .title {
+    color: white;
+} */
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.packages .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+.packages .grid li h4 {
+    font-size: 20px;
+}
+.packages .grid li i {
+    color: #649EA2;
+    /* color:  #FD9578; */
+}
+.grid .fa {
+    font-size: 50px;
+}
+
+
+/* ****************************** */
+ .banner {
     position: relative;
     height: 300px;
     background-image: linear-gradient(#FD9578,	#FD9578);
   }
-  .main h1 {
+  .banner h1 {
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 15px;
   }
   svg {
@@ -127,16 +205,17 @@ header nav li {
       display: none;
     }
   }
-  .main a.btn {
+  .banner a.btn {
     padding: 15px 30px;
     background-color: 	#6AA3AC;
 }
   /* *************************************** */
+
   footer {
       text-align: center;
       padding: 40px;
   }
-  .fa {
+  footer .fa {
     font-size: 30px;
     width: 30px;
     text-align: center;
