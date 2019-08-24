@@ -21,7 +21,7 @@ a {
     opacity: 0.75;
     color: white;
 }
-a:hover: {
+a:hover {
     opacity: 1;
 }
 a.btn {
@@ -147,33 +147,182 @@ header nav li {
       max-width: 100%;
     }
   }
+  /*  */
+.item {
+  position: relative;
+  overflow: hidden;
+  width 100%;
+  text-align: center;
+  box-shadow: 0 0 5px(rgba 0, 0, 0, 0.15);
+}
+
+.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #FD957A;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  .item * {
+    transition: all 0.5s ease-in-out;
+    box-sizing: border-box;
+  }
+  .item:hover img {
+    opacity: 0.3;
+    filter: grayscale(100%);
+  }
+  
+  .item:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  /* ************************** */
+
+  .banner_logo {
+    font-family: 'Lexend Mega', sans-serif;
+  }
+  .banner p {
+    color: white;
+  }
+  .btn-white {
+  float: right;
+  font-size: 16px;
+  line-height: 46px;
+  margin: 20px 0px 20px 30px;
+  padding: 0px 45px;
+  border: solid white 1px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  }
 /* ***************************** */
 .packages {
-    background-color: #f2f2f2;
+  background:#f2f2f2;
 }
-/* .packages .header .title {
-    color: white;
-} */
-.grid {
-    width: 100%;
+  .box_container {
+    padding: 0;
+    margin: auto;
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    -webkit-flex-flow: row wrap;
     justify-content: center;
-}
-.packages .grid li {
-    padding: 50px;
-    flex-basis: 50%;
+    width: 100%;
+  }
+  
+  .box {
+    padding: 3%;
+    width: 33%;
+    margin: 1%;
+    color: black;
     text-align: center;
+    background: white;
+    background-position: center; 
+    background-size: cover; 
+    color: white;
 }
-.packages .grid li h4 {
+  .box h4 {
     font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-.packages .grid li i {
-    color: #649EA2;
-    /* color:  #FD9578; */
+.box .fa {
+  font-size: 45px;
+  color: #FD957A;
 }
-.grid .fa {
-    font-size: 50px;
+/* ******************************** */
+
+/* Slideshow container */
+.container-slideshow {
+  background: white;
+  padding: 2rem;
+}
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 8px;
+  color: black;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+
+/* Caption text */
+.slidetext {
+  font-size: 2vw;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.slidetext p {
+  font-size: 75%;
+}
+.slideshow_heading {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1rem;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 2px;
+  background-color: #fecabc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #FD957A;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}  
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 
@@ -181,7 +330,7 @@ header nav li {
  .banner {
     position: relative;
     height: 300px;
-    background-image: linear-gradient(#FD9578,	#FD9578);
+    background-image: linear-gradient( #649EA2,	 #649EA2);
   }
   .banner h1 {
     color: white;
@@ -207,7 +356,7 @@ header nav li {
   }
   .banner a.btn {
     padding: 15px 30px;
-    background-color: 	#6AA3AC;
+    background-color: 	#FD957A;
 }
   /* *************************************** */
 
@@ -227,3 +376,5 @@ header nav li {
     border: 1px solid black;
     text-align: center;
   }
+
+  
